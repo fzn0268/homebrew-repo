@@ -1,25 +1,20 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Libxcb < Formula
-  desc "This package contains the library files needed to run software using libxcb-composite, the composite extension for the X C Binding."
+  desc "This package contains the library files needed to run software using libxcb-composite, the composite extension for the X C Binding"
   homepage "https://xcb.freedesktop.org/"
   url "https://xcb.freedesktop.org/dist/libxcb-1.14.tar.xz"
   sha256 "a55ed6db98d43469801262d81dc2572ed124edc3db31059d4e9916eb9f844c34"
   license ""
 
-  depends_on "libxau"
   depends_on "libpthread-stubs"
+  depends_on "libxau"
   depends_on "xcb-proto"
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}"
-    system "make", "install" # if this fails, try separate make/make install steps
+    system "make", "install"
   end
 
   test do

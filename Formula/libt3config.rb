@@ -1,33 +1,19 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Libt3config < Formula
-  desc "The libt3config library provides functions for reading and writing simple structured configuration files. It provides a simple structured syntax and typed data, a simple API for reading and manipulating configurations, and schema definitions allowing the verification of the structure of loaded configuration data."
+  desc "The libt3config library provides functions for reading and writing simple structured configuration files. It provides a simple structured syntax and typed data, a simple API for reading and manipulating configurations, and schema definitions allowing the verification of the structure of loaded configuration data"
   homepage "https://os.ghalkes.nl/doc/libt3config/"
   url "http://deb.debian.org/debian/pool/main/libt/libt3config/libt3config_1.0.0.orig.tar.bz2"
   sha256 "1aba7262ed79b11b30f93d02183aafde49c9d6655f08ac438b26af3151908c01"
-  license "GPL-3.0"
+  license "GPL-3.0-only"
 
-  # depends_on "cmake" => :build
-#  depends_on "gcc"
-  depends_on "libtool"
+  depends_on "libtool" => :build
   depends_on "gettext"
 
-#  fails_with :clang do
-#          build 900
-#          cause "Need gcc"
-#   end
-
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
-    # Remove unrecognized options if warned by configure
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
                           "--disable-silent-rules",
                           "--prefix=#{prefix}",
-                          "LIBTOOL=/usr/local/bin/glibtool"
-#			  ,"CXX=g++"
-    # system "cmake", ".", *std_cmake_args
+                          "LIBTOOL=#{Formula["libtool"].opt_bin}/glibtool"
     system "make", "all"
     system "make", "install"
   end
