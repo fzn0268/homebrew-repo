@@ -7,7 +7,7 @@ class XorgXorgproto < Formula
 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
-  depends_on :x11
+  depends_on "libx11"
 
   def install
     system "./autogen.sh"
