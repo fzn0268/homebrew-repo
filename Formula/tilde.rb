@@ -1,18 +1,17 @@
 class Tilde < Formula
   desc "Text editor for the console/terminal, which provides an intuitive interface for people accustomed to GUI environments such as Gnome, KDE and Windows"
   homepage "https://os.ghalkes.nl/tilde/"
-  url "https://os.ghalkes.nl/dist/tilde-1.1.2.tar.bz2"
-  sha256 "4e74d926e54ff9c1e4fdfbce8065f64a2cee4ef623569739efa8eae8bdb694ce"
+  url "https://os.ghalkes.nl/dist/tilde-1.1.3.tar.bz2"
+  sha256 "6b86ffaa5c632c9055f74fca713c5bf8420ee60718850dc16a95abe49fa2641a"
   license "GPL-3.0-only"
 
-  depends_on "gcc"
+  depends_on "gcc" => :build
   depends_on "gettext"
   depends_on "libt3highlight"
   depends_on "libt3widget"
   depends_on "libtranscript"
 
   fails_with :clang do
-    build 900
     cause "Need gcc"
   end
 

@@ -1,7 +1,7 @@
 class Libt3key < Formula
   desc "The libt3key library provides functions for retrieving the character sequences used by terminals to represent keys pressed by the user. Although the terminfo database provides part of this information, it lacks information for the sequences returned by modern terminals/terminal emulators for many combinations of modifiers with other keys. For example, many terminal emulators provide separate character sequences for Control combined with the cursor keys, which is not stored in the terminfo database"
-  homepage "https://os.ghalkes.nl/doc/libt3key/"
-  url "http://deb.debian.org/debian/pool/main/libt/libt3key/libt3key_0.2.10.orig.tar.bz2"
+  homepage "https://os.ghalkes.nl/t3/libt3key.html"
+  url "https://os.ghalkes.nl/dist/libt3key-0.2.10.tar.bz2"
   sha256 "b3f63c8a5bdf4efc10a293e5124a4a1095af6149af96b0a10b3ce7da7400f8c1"
   license "GPL-3.0-only"
 

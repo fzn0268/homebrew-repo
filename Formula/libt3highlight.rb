@@ -1,7 +1,7 @@
 class Libt3highlight < Formula
   desc "The libt3highlight library provides functions for syntax-highlighting different types of text files. Its main design goal is an easily restartable syntax highlighting, suitable for use in interactive text editors"
-  homepage "https://os.ghalkes.nl/doc/libt3highlight/"
-  url "http://deb.debian.org/debian/pool/main/libt/libt3highlight/libt3highlight_0.5.0.orig.tar.bz2"
+  homepage "https://os.ghalkes.nl/t3/libt3highlight.html"
+  url "https://os.ghalkes.nl/dist/libt3highlight-0.5.0.tar.bz2"
   sha256 "8216190785e52a116f9f78ec6513815745904c2aaf70d0a0a09438e08640dfbb"
   license "GPL-3.0-only"
 

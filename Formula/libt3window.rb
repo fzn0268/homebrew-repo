@@ -1,8 +1,8 @@
 class Libt3window < Formula
   desc "The libt3window library provides functions for manipulating the terminal and for creating (possibly overlapping) windows on a terminal. libt3window can be used instead of (n)curses for drawing on the terminal."
-  homepage "https://os.ghalkes.nl/doc/libt3window/"
-  url "http://deb.debian.org/debian/pool/main/libt/libt3window/libt3window_0.4.0.orig.tar.bz2"
-  sha256 "7ebceee248a6032eef1cf00b2cd20aa5a7a14114441b40bacdec03858ce40d63"
+  homepage "https://os.ghalkes.nl/t3/libt3window.html"
+  url "https://os.ghalkes.nl/dist/libt3window-0.4.1.tar.bz2"
+  sha256 "4c14d3f4f946637fd6c3fa23ef7511fa505880946e151406d5e16f645d24e792"
   license "GPL-3.0-only"
 
   depends_on "libtool" => :build

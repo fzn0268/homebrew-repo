@@ -1,7 +1,7 @@
 class Libt3config < Formula
   desc "The libt3config library provides functions for reading and writing simple structured configuration files. It provides a simple structured syntax and typed data, a simple API for reading and manipulating configurations, and schema definitions allowing the verification of the structure of loaded configuration data"
-  homepage "https://os.ghalkes.nl/doc/libt3config/"
-  url "http://deb.debian.org/debian/pool/main/libt/libt3config/libt3config_1.0.0.orig.tar.bz2"
+  homepage "https://os.ghalkes.nl/t3/libt3config.html"
+  url "https://os.ghalkes.nl/dist/libt3config-1.0.0.tar.bz2"
   sha256 "1aba7262ed79b11b30f93d02183aafde49c9d6655f08ac438b26af3151908c01"
   license "GPL-3.0-only"
 

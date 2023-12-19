@@ -1,8 +1,8 @@
 class Libt3widget < Formula
   desc "The libt3widget library provides a C++ dialog toolkit. It provides objects for dialogs and widgets like buttons, text fields, check boxes etc., to facilitate easy construction of dialog based programs for Un*x terminals"
-  homepage "https://os.ghalkes.nl/doc/libt3widget/"
-  url "http://deb.debian.org/debian/pool/main/libt/libt3widget/libt3widget_1.2.0.orig.tar.bz2"
-  sha256 "5c6d907ff3cf2a2379d4e928a1f18c16ed2e7e9301b66d3560d69e45f9e6667d"
+  homepage "https://os.ghalkes.nl/t3/libt3widget.html"
+  url "https://os.ghalkes.nl/dist/libt3widget-1.2.2.tar.bz2"
+  sha256 "9eb7e1d0ccdfc917f18ba1785a2edb4faa6b0af8b460653d962abf91136ddf1c"
   license "GPL-3.0-only"
 
   depends_on "gcc" => :build
@@ -12,7 +12,6 @@ class Libt3widget < Formula
   depends_on "libt3window"
 
   fails_with :clang do
-    build 900
     cause "Need libstdc++"
   end
 
